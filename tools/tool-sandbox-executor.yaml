@@ -1,0 +1,22 @@
+name: "tool-sandbox-executor"
+description: "Executes sandboxed tools, scripts, and API calls with strict input schema validation."
+input_schema:
+  type: object
+  properties:
+    tool_name:
+      type: string
+      description: "Identifier of the tool to execute."
+    parameters:
+      type: object
+      description: "Validated parameters dictionary for the tool."
+    timeout_seconds:
+      type: integer
+      description: "Execution timeout in seconds."
+      default: 60
+    allow_network:
+      type: boolean
+      description: "Whether the tool is permitted external network connectivity."
+      default: false
+  required:
+    - tool_name
+    - parameters

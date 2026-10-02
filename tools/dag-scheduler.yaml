@@ -1,0 +1,22 @@
+name: "dag-scheduler"
+description: "Plans, queues, and executes multi-agent DAG task graphs with dependency tracking."
+input_schema:
+  type: object
+  properties:
+    dag_definition:
+      type: object
+      description: "Workflow DAG structure containing nodes, agents, and dependency edges."
+    action:
+      type: string
+      enum:
+        - "compile"
+        - "start"
+        - "pause"
+        - "resume"
+        - "cancel"
+      description: "Scheduling operation to perform."
+    run_id:
+      type: string
+      description: "Unique identifier for this workflow run."
+  required:
+    - action

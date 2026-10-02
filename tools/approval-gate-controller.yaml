@@ -1,0 +1,21 @@
+name: "approval-gate-controller"
+description: "Requests, validates, and records durable cryptographic approvals for consequential actions."
+input_schema:
+  type: object
+  properties:
+    run_id:
+      type: string
+      description: "Identifier of the associated workflow run."
+    action_type:
+      type: string
+      description: "Consequential operation requiring authorization."
+    action_payload:
+      type: object
+      description: "Complete parameters and diff of the pending action."
+    approval_token:
+      type: string
+      description: "Signed approval token provided by the human operator."
+  required:
+    - run_id
+    - action_type
+    - action_payload

@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "open-multi-agent"
+version: "0.1.0"
+description: "Self-hosted TypeScript multi-agent runtime with durable human approvals and byte-for-byte verifiable audit records."
+author: "OMA Team & Open Multi-Agent Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Multi-Agent Runtime, Durable Governance & Audit Ledgers"
+  category: "Developer Tools"
+  framework: "OMA TypeScript Core / SQLite / WebCrypto"
+  language: "TypeScript"
+skills:
+  - "durable-approval-governance"
+  - "verifiable-run-auditing"
+  - "multi-agent-dag-scheduling"
+  - "self-hosted-runtime-control"
+tools:
+  - "dag-scheduler"
+  - "approval-gate-controller"
+  - "verifiable-record-generator"
+  - "tool-sandbox-executor"
+  - "offline-state-ledger"

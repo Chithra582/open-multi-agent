@@ -1,0 +1,22 @@
+name: "verifiable-record-generator"
+description: "Generates tamper-evident cryptographic hash receipts and audit ledgers for completed runs."
+input_schema:
+  type: object
+  properties:
+    run_id:
+      type: string
+      description: "Identifier of the workflow run to verify or seal."
+    action:
+      type: string
+      enum:
+        - "append_event"
+        - "compute_merkle_root"
+        - "export_receipt"
+        - "verify_offline"
+      description: "Cryptographic ledger action."
+    event_data:
+      type: object
+      description: "Raw event payload to serialize and hash."
+  required:
+    - run_id
+    - action

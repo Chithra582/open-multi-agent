@@ -1,0 +1,22 @@
+name: "offline-state-ledger"
+description: "Persists and queries execution history, checkpoints, and model prompt traces offline."
+input_schema:
+  type: object
+  properties:
+    run_id:
+      type: string
+      description: "Identifier of target workflow run."
+    query_type:
+      type: string
+      enum:
+        - "get_state"
+        - "get_history"
+        - "checkpoint"
+        - "audit_trail"
+      description: "State query or checkpoint action."
+    checkpoint_data:
+      type: object
+      description: "State snapshot dictionary to commit."
+  required:
+    - run_id
+    - query_type
